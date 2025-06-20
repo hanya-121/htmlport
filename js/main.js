@@ -74,6 +74,12 @@ document.addEventListener('DOMContentLoaded', function () {
         showClasses.forEach(cls => {
           document.querySelectorAll(`.${cls}`).forEach(el => {
             el.style.display = 'block';
+
+            // 추가, 해당 요소가 .ss <td> 안에 있으면 <td>도 보여주기 -----------------------------
+            const parentTd = el.closest('.ss');
+            if (parentTd) {
+              parentTd.style.display = 'table-cell'; // 추가 끝
+            }
           });
         });
       }
@@ -81,10 +87,13 @@ document.addEventListener('DOMContentLoaded', function () {
       // '전체보기' 또는 '라디오'일 경우 .ss 클래스 보이게 하기
       if (selected === '전체보기' || selected === '라디오') {
         document.querySelectorAll('.ss').forEach(el => {
-          el.style.display = 'block';
+          // el.style.display = 'block'; (기존 내용)
+          // 추가 ---------------------------------------------------------------------------
+          td.style.display = 'table-cell';
+          const radio = td.querySelector('radio_sc');
+          if (radio) radio.style.display = 'block'; // 추가 끝
         });
       }
     });
   });
 });
-
