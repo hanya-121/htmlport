@@ -58,9 +58,12 @@ body{
                 tr{
                     .week-1{
                     height: 50px !important;
+                    border-bottom: transparent !important;
                 }
                     .week-1-1{
                     height: 134px !important;
+                    border-top: transparent !important;
+                    border-left: none !important;
                     // background-color: red;
                 }
                     td{
@@ -135,11 +138,6 @@ td{
 .opa-text{
     opacity: 0.4;
 }
-.week-1-1{
-    border-left: none !important;
-    border-top: transparent !important;
-}
-.week-1{border-bottom: transparent !important;}
 
 
 //미디어쿼리

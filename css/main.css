@@ -1153,9 +1153,12 @@ body .cal_wrap .calendar tbody .ss {
 }
 body .cal_wrap .calendar tbody tr .week-1 {
   height: 50px !important;
+  border-bottom: transparent !important;
 }
 body .cal_wrap .calendar tbody tr .week-1-1 {
   height: 134px !important;
+  border-top: transparent !important;
+  border-left: none !important;
 }
 body .cal_wrap .calendar tbody tr td {
   width: 230px;
@@ -1223,15 +1226,6 @@ td {
 
 .opa-text {
   opacity: 0.4;
-}
-
-.week-1-1 {
-  border-left: none !important;
-  border-top: transparent !important;
-}
-
-.week-1 {
-  border-bottom: transparent !important;
 }
 
 /* PC */
